@@ -1,4 +1,4 @@
-### Tor requests
+### Tor requests example
 
 Example of browsing darknet using Tor client and python `request` library.
 
@@ -21,7 +21,7 @@ sudo systemctl restart tor
 Clone the repo and run the following:
 
 ```commandline
-cd darknet-test
+cd tor-requests-example
 source source_me.sh
 create_venv
 ```
