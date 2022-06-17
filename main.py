@@ -30,7 +30,7 @@ def get_tor_ip() -> None:
     ).text)
 
 
-def change_tor_ip() -> None:
+def request_new_tor_circuit() -> None:
     with Controller.from_port(port=9051) as controller:
         controller.authenticate(password=get_control_port_password())
         controller.signal(Signal.NEWNYM)
@@ -38,11 +38,11 @@ def change_tor_ip() -> None:
 
 CONFIG_FILE = "config.yaml"
 IP_URL = "https://api.ipify.org"
-HELP_MESSAGE = "Usage: main.py <print_id|print_tor_ip|change_tor_ip>"
+HELP_MESSAGE = "Usage: main.py <get_ip|get_tor_ip|request_new_tor_circuit>"
 FUNCTIONS = {
     "get_ip": get_ip,
     "get_tor_ip": get_tor_ip,
-    "change_tor_ip": change_tor_ip
+    "request_new_tor_circuit": request_new_tor_circuit
 }
 
 
