@@ -4,7 +4,7 @@ Example of browsing darknet using Tor client and python `request` library.
 
 #### Install
 
-Install Tor using instructions from here https://support.torproject.org/apt/. Enable control port and password-protect it:
+Install Tor using instructions from here https://support.torproject.org/apt/tor-deb-repo/ (you can simply use `apt install tor` but it's not recommended by [tor project website](https://support.torproject.org/apt/)). Enable control port and password-protect it:
 
 ```commandline
 torpass=$(tor --hash-password "my-tor-password")
@@ -32,4 +32,6 @@ create_venv
 
 `python main.py <get_ip|get_tor_ip|change_tor_ip>`
 
-Make sure that Tor service is running.
+You can also use `test_ip` from `source_me.sh` which showcases the use of script.
+
+Note: Make sure that Tor service is running.
